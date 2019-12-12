@@ -28,12 +28,14 @@
         function preload(){
             this.load.image('etoile', 'star1.png');
             this.load.image('fond', 'abstract-background.jpg');
+            this.load.image('bad', 'bad.png');
             
         }
         function create(){
             //x horizontal
             //y vertical
-            fond= this.add.sprite(400,250,'fond');
+            fond = this.add.sprite(400,250,'fond');
+            bad = this.add.image(100,300,'bad');
            etoile = this.physics.add.image(650,90, 'etoile');
            etoile.body.collideWorldBounds=true;
            cursors= this.input.keyboard.createCursorKeys();
